@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { Upload, Image as ImageIcon, RefreshCw, Check, Trash, Download } from "lucide-react";
 import Image from "next/image";
+import { toast } from "react-hot-toast";
 
 // Random funny captions for memes
 const TOP_CAPTIONS = [
@@ -49,10 +50,14 @@ export default function MemeGenerator() {
   useEffect(() => {
     const fetchMemes = async () => {
       try {
-        const response = await fetch('/api/memes');
+        const response = await fetch('/api/memes', {
+          headers: {
+            'x-api-key': process.env.NEXT_PUBLIC_API_KEY || '',
+          },
+        });
         
         if (!response.ok) {
-          throw new Error(`Failed to fetch memes: ${response.status} ${response.statusText}`);
+          throw new Error('Failed to fetch memes');
         }
         
         const data = await response.json();
@@ -62,7 +67,8 @@ export default function MemeGenerator() {
           console.error('Error fetching memes:', data.error);
         }
       } catch (error) {
-        console.error('Error loading memes:', error);
+        console.error('Error fetching memes:', error);
+        toast.error('Failed to fetch memes');
       }
     };
     
