@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 300 100% 50%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 270 100% 60%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 330 100% 50%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 300 100% 50%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 270 50% 5%;
+    --foreground: 210 40% 98%;
+    --card: 270 50% 10%;
+    --card-foreground: 210 40% 98%;
+    --popover: 270 50% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 300 100% 50%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 270 100% 60%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 270 50% 15%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 330 100% 50%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 270 50% 20%;
+    --input: 270 50% 20%;
+    --ring: 300 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Custom cursor */
+.meme-cursor {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='%23ff00ff' stroke-width='2'><path d='M18 8h1a4 4 0 0 1 0 8h-1'></path><path d='M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z'></path><line x1='6' y1='1' x2='6' y2='4'></line><line x1='10' y1='1' x2='10' y2='4'></line><line x1='14' y1='1' x2='14' y2='4'></line></svg>")
+    16 16, pointer;
+}
+
+/* Glow effects */
+.glow {
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+}
+
+.glow-text {
+  text-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-600;
+}
