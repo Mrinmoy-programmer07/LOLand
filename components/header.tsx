@@ -49,7 +49,9 @@ export default function Header() {
     { name: "Home", href: "/", icon: <Home className="h-5 w-5" /> },
     { name: "Meme Feed", href: "/feed", icon: <ImageIcon className="h-5 w-5" /> },
     { name: "Upload Meme", href: "/upload", icon: <Upload className="h-5 w-5" /> },
+    { name: "Generator", href: "/generator", icon: <ImageIcon className="h-5 w-5" /> },
     { name: "Marketplace", href: "/marketplace", icon: <ShoppingCart className="h-5 w-5" /> },
+    { name: "NFTs", href: "/nft", icon: <Wallet className="h-5 w-5" /> },
     { name: "Leaderboard", href: "/leaderboard", icon: <Trophy className="h-5 w-5" /> },
   ]
 

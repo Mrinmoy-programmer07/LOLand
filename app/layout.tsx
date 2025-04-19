@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { Web3Provider } from "@/providers/web3-provider"
+import { Providers } from './providers'
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -27,11 +28,13 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
           <Web3Provider>
-            <div className="relative min-h-screen flex flex-col">
-              <Header />
-              <main className="flex-grow">{children}</main>
-              <Footer />
-            </div>
+            <Providers>
+              <div className="relative min-h-screen flex flex-col">
+                <Header />
+                <main className="flex-grow">{children}</main>
+                <Footer />
+              </div>
+            </Providers>
           </Web3Provider>
         </ThemeProvider>
       </body>
