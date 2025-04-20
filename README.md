@@ -48,14 +48,13 @@
     <td align="center"><b>Authentication</b></td>
     <td>
       <img src="https://img.shields.io/badge/Web3Auth-6851FF?style=flat&logo=ethereum&logoColor=white" alt="Web3Auth" />
-      <img src="https://img.shields.io/badge/NextAuth.js-black?style=flat&logo=next.js&logoColor=white" alt="NextAuth.js" />
     </td>
   </tr>
   <tr>
     <td align="center"><b>Database</b></td>
     <td>
+      <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=flat&logo=supabase&logoColor=white" alt="Supabase" />
       <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-      <img src="https://img.shields.io/badge/Prisma-2D3748?style=flat&logo=prisma&logoColor=white" alt="Prisma" />
     </td>
   </tr>
   <tr>
@@ -66,13 +65,6 @@
       <img src="https://img.shields.io/badge/RainbowKit-7B3FE4?style=flat&logo=ethereum&logoColor=white" alt="RainbowKit" />
     </td>
   </tr>
-  <tr>
-    <td align="center"><b>Storage</b></td>
-    <td>
-      <img src="https://img.shields.io/badge/IPFS-65C2CB?style=flat&logo=ipfs&logoColor=white" alt="IPFS" />
-      <img src="https://img.shields.io/badge/Infura-FF6B4A?style=flat&logo=infura&logoColor=white" alt="Infura" />
-    </td>
-  </tr>
 </table>
 
 ## 🚀 Getting Started
@@ -80,9 +72,8 @@
 ### Prerequisites
 
 - Node.js 18.0 or later
-- PostgreSQL database
-- Web3Auth account for client credentials
-- Infura account for IPFS storage (optional)
+- Supabase account for database
+- Web3Auth account for authentication
 
 ### Installation
 
@@ -107,8 +98,10 @@
 
 4. Update your `.env` file with your own values:
    ```env
-   # Database
-   DATABASE_URL="postgresql://username:password@localhost:5432/loland_db"
+   # Supabase Configuration
+   NEXT_PUBLIC_SUPABASE_URL="your-supabase-url"
+   NEXT_PUBLIC_SUPABASE_ANON_KEY="your-supabase-anon-key"
+   SUPABASE_SERVICE_ROLE_KEY="your-supabase-service-role-key"
 
    # Web3Auth Configuration
    WEB3AUTH_CLIENT_ID="YOUR_WEB3AUTH_CLIENT_ID"
@@ -118,31 +111,20 @@
    # NextAuth Configuration
    NEXTAUTH_URL="http://localhost:3000"
    NEXTAUTH_SECRET="your-nextauth-secret-key"
-
-   # IPFS Configuration
-   NEXT_PUBLIC_IPFS_GATEWAY="https://ipfs.io/ipfs/"
-   INFURA_IPFS_PROJECT_ID="YOUR_INFURA_IPFS_PROJECT_ID"
-   INFURA_IPFS_PROJECT_SECRET="YOUR_INFURA_IPFS_PROJECT_SECRET"
    ```
 
-5. Create and seed the database:
-   ```bash
-   npx prisma migrate dev --name init
-   npx prisma db seed
-   ```
-
-6. Start the development server:
+5. Start the development server:
    ```bash
    npm run dev
    ```
 
-7. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
+6. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
 </details>
 
 ## 📊 Database Schema
 
-LOLand uses a PostgreSQL database with the following key models:
+LOLand uses Supabase with PostgreSQL for its database with the following key models:
 
 <details>
 <summary>Click to view database schema</summary>
@@ -195,14 +177,10 @@ LOLand uses a PostgreSQL database with the following key models:
 <summary>Click to view authentication details</summary>
 
 1. **User Authentication**:
-   - Users can sign in using Web3Auth with various social logins or their existing wallets
-   - Upon successful authentication, user information is stored in the database
+   - Users sign in using Web3Auth with various social logins or their existing wallets
+   - Upon successful authentication, user information is stored in Supabase
 
-2. **Session Management**:
-   - NextAuth.js handles session management and persistence
-   - Sessions are linked to both Web3Auth credentials and wallet addresses
-
-3. **Wallet Integration**:
+2. **Wallet Integration**:
    - After authentication, users can connect their wallets using RainbowKit
    - The connected wallet is associated with the user's account
 
@@ -214,7 +192,7 @@ LOLand uses a PostgreSQL database with the following key models:
 <summary>Click to view NFT minting details</summary>
 
 1. User uploads a meme to the platform
-2. Meme is stored on IPFS to ensure decentralized persistence
+2. Meme metadata is stored in Supabase
 3. User can initiate minting through the UI
 4. Smart contract interaction creates an NFT on the blockchain
 5. Meme is updated in the database with tokenId and contract address
@@ -229,7 +207,7 @@ LOLand uses a PostgreSQL database with the following key models:
 
 | Endpoint | Description |
 |----------|-------------|
-| `/api/auth/*` | Authentication endpoints (handled by NextAuth.js) |
+| `/api/auth/*` | Authentication endpoints |
 | `/api/users/*` | User profile management |
 | `/api/memes/*` | Meme creation, retrieval, and management |
 | `/api/collections/*` | Collection creation and management |
