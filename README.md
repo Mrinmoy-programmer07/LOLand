@@ -236,25 +236,4 @@ Contributions are what make the open source community such an amazing place to l
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📞 Contact
 
-<div align="center">
-
-Project Link: [https://github.com/Mrinmoy-programmer07/LOLand](https://github.com/Mrinmoy-programmer07/LOLand)
-
-Join our community:
-
-[![Discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/loland)
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/lolandapp)
-
-</div>
-
----
-
-<div align="center">
-
-### Made with ❤️ by LOLand Team
-
-**Share a meme, earn a coin!**
-
-</div> 
