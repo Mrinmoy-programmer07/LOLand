@@ -7,7 +7,12 @@ import { User, Wallet, ExternalLink } from 'lucide-react';
 import { formatEther } from 'viem';
 
 export function WalletProfile() {
-  const { address, isConnected, balance, disconnectWallet } = useWallet();
+  const { 
+    address, 
+    isConnected, 
+    disconnectWallet,
+    getBalance 
+  } = useWallet();
 
   if (!isConnected || !address) {
     return null;
@@ -17,7 +22,8 @@ export function WalletProfile() {
   const shortAddress = `${address.slice(0, 6)}...${address.slice(-4)}`;
   
   // Get ETH balance formatted to 4 decimal places
-  const ethBalance = balance ? Number(formatEther(balance.value)).toFixed(4) : '0.0000';
+  const walletBalance = getBalance();
+  const ethBalance = walletBalance ? Number(formatEther(walletBalance)).toFixed(4) : '0.0000';
 
   return (
     <div className="p-4 bg-purple-800/30 rounded-lg space-y-4">

@@ -21,7 +21,7 @@ export function useWallet() {
   useEffect(() => {
     const initProvider = async () => {
       if (isMetaMaskAvailable()) {
-        const provider = new ethers.BrowserProvider(window.ethereum);
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
         setProvider(provider);
 
         // Listen for account changes
@@ -70,10 +70,10 @@ export function useWallet() {
     const checkConnection = async () => {
       if (isMetaMaskAvailable() && provider) {
         try {
-          const accounts = await provider.listAccounts();
+          const accounts = await window.ethereum.request({ method: 'eth_accounts' });
           if (accounts && accounts.length > 0) {
-            setAddress(accounts[0].address);
-            const signer = await provider.getSigner();
+            setAddress(accounts[0]);
+            const signer = provider.getSigner();
             setSigner(signer);
             setIsConnected(true);
           }
@@ -110,15 +110,19 @@ export function useWallet() {
       setAddress(account);
       
       // Get signer
-      const signer = await provider.getSigner();
+      const signer = provider.getSigner();
       setSigner(signer);
       
       setIsConnected(true);
       toast.success('Wallet connected');
       return true;
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error connecting wallet:', error);
-      toast.error('Failed to connect wallet');
+      if (error.code === 4001) {
+        toast.error('User denied account access');
+      } else {
+        toast.error('Failed to connect wallet');
+      }
       return false;
     } finally {
       setIsConnecting(false);
@@ -224,6 +228,17 @@ export function useWallet() {
     }
   };
 
+  const getBalance = useCallback(async () => {
+    if (!provider || !address) return null;
+    try {
+      const balance = await provider.getBalance(address);
+      return balance;
+    } catch (error) {
+      console.error('Error getting balance:', error);
+      return null;
+    }
+  }, [provider, address]);
+
   return {
     provider,
     signer,
@@ -235,6 +250,7 @@ export function useWallet() {
     disconnectWallet,
     switchNetwork,
     getNetworkName,
-    isMetaMaskAvailable
+    isMetaMaskAvailable,
+    getBalance
   };
 } 

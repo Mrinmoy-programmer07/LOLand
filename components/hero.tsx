@@ -128,7 +128,26 @@ export default function Hero() {
           >
             <div className="relative h-[400px] w-full">
               {/* Meme Cards */}
-              {[1, 2, 3].map((index) => (
+              {[
+                {
+                  image: "https://i.imgur.com/1QZ1Z1Z.jpg",
+                  title: "Epic Meme #1",
+                  creator: "MemeCreator1",
+                  price: "0.2 ETH"
+                },
+                {
+                  image: "https://i.imgur.com/2QZ2Z2Z.jpg",
+                  title: "Epic Meme #2",
+                  creator: "MemeCreator2",
+                  price: "0.4 ETH"
+                },
+                {
+                  image: "https://i.imgur.com/3QZ3Z3Z.jpg",
+                  title: "Epic Meme #3",
+                  creator: "MemeCreator3",
+                  price: "0.6 ETH"
+                }
+              ].map((meme, index) => (
                 <motion.div
                   key={index}
                   className="absolute top-0 left-0 w-full h-full bg-purple-900/40 backdrop-blur-sm rounded-3xl overflow-hidden border border-purple-500/30 shadow-xl"
@@ -149,15 +168,15 @@ export default function Hero() {
                   }}
                 >
                   <img
-                    src={`/placeholder.svg?height=400&width=600&text=Meme+${index}`}
-                    alt={`Featured meme ${index}`}
+                    src={meme.image}
+                    alt={meme.title}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-purple-900/90 to-transparent p-6">
-                    <h3 className="text-xl font-bold text-white mb-2">Epic Meme #{index}</h3>
+                    <h3 className="text-xl font-bold text-white mb-2">{meme.title}</h3>
                     <div className="flex justify-between items-center">
-                      <span className="text-purple-200">@MemeCreator{index}</span>
-                      <span className="text-green-400 font-bold">0.{index * 2} ETH</span>
+                      <span className="text-purple-200">@{meme.creator}</span>
+                      <span className="text-green-400 font-bold">{meme.price}</span>
                     </div>
                   </div>
                 </motion.div>
