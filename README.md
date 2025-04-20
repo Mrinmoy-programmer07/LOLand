@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="https://i.imgur.com/7PfbXEE.png" alt="LOLand Banner" width="600" />
+<img src="https://i.ibb.co/3pvkDgM/LOLand-logo.png" alt="LOLand Banner" width="600" />
 
 [![Next.js](https://img.shields.io/badge/Next.js-13.0+-000000?style=flat&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19.0+-61DAFB?style=flat&logo=react&logoColor=black)](https://reactjs.org/)
