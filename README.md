@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![LOLand Banner](https://via.placeholder.com/1200x300/4a2c8e/ffffff?text=LOLand+-+Web3+Meme+Platform)
+<img src="https://i.ibb.co/3pvkDgM/LOLand-logo.png" alt="LOLand Banner" width="600" />
 
 [![Next.js](https://img.shields.io/badge/Next.js-13.0+-000000?style=flat&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19.0+-61DAFB?style=flat&logo=react&logoColor=black)](https://reactjs.org/)
@@ -13,7 +13,7 @@
 
 **LOLand is a decentralized meme platform that empowers creators to share, monetize, and mint their memes as NFTs.**
 
-[Demo](https://loland.vercel.app) · [Report Bug](https://github.com/yourusername/loland/issues) · [Request Feature](https://github.com/yourusername/loland/issues)
+[Demo](https://loland.vercel.app) · [Report Bug](https://github.com/Mrinmoy-programmer07/LOLand/issues) · [Request Feature](https://github.com/Mrinmoy-programmer07/LOLand/issues)
 
 </div>
 
@@ -30,7 +30,6 @@
 - 👤 **Profile Management** - Customize your profile with bio, avatar, and social links
 - 🔍 **Discovery** - Find trending memes and popular creators through algorithmic recommendations
 - 📱 **Responsive Design** - Optimized for both desktop and mobile experiences
-- 🌙 **Dark Mode** - Easy on the eyes with a beautiful dark theme
 
 ## 🛠️ Tech Stack
 
@@ -82,7 +81,7 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/loland.git
+   git clone https://github.com/Mrinmoy-programmer07/LOLand.git
    cd loland
    ```
 
@@ -217,26 +216,6 @@ LOLand uses Supabase with PostgreSQL for its database with the following key mod
 
 </details>
 
-## 📱 Responsive Design
-
-LOLand is fully responsive and optimized for all devices:
-
-<div align="center">
-
-| Desktop | Mobile |
-|---------|--------|
-| ![Desktop View](https://via.placeholder.com/500x300/4a2c8e/ffffff?text=Desktop+View) | ![Mobile View](https://via.placeholder.com/200x400/4a2c8e/ffffff?text=Mobile+View) |
-
-</div>
-
-## 🎨 Color Palette
-
-<div align="center">
-<img src="https://via.placeholder.com/800x100/4a2c8e/ffffff?text=Primary" alt="Primary" />
-<img src="https://via.placeholder.com/800x100/c4a7e7/000000?text=Secondary" alt="Secondary" />
-<img src="https://via.placeholder.com/800x100/eb6f92/ffffff?text=Accent" alt="Accent" />
-<img src="https://via.placeholder.com/800x100/1f1d2e/ffffff?text=Background" alt="Background" />
-</div>
 
 ## 🤝 Contributing
 
@@ -261,7 +240,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-Project Link: [https://github.com/yourusername/loland](https://github.com/yourusername/loland)
+Project Link: [https://github.com/Mrinmoy-programmer07/LOLand](https://github.com/Mrinmoy-programmer07/LOLand)
 
 Join our community:
 
@@ -277,7 +256,5 @@ Join our community:
 ### Made with ❤️ by LOLand Team
 
 **Share a meme, earn a coin!**
-
-<img src="https://via.placeholder.com/150x150/4a2c8e/ffffff?text=LOLand" alt="LOLand Logo" width="100" />
 
 </div> 
