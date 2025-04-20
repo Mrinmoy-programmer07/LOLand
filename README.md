@@ -30,7 +30,6 @@
 - 👤 **Profile Management** - Customize your profile with bio, avatar, and social links
 - 🔍 **Discovery** - Find trending memes and popular creators through algorithmic recommendations
 - 📱 **Responsive Design** - Optimized for both desktop and mobile experiences
-- 🌙 **Dark Mode** - Easy on the eyes with a beautiful dark theme
 
 ## 🛠️ Tech Stack
 
@@ -217,26 +216,6 @@ LOLand uses Supabase with PostgreSQL for its database with the following key mod
 
 </details>
 
-## 📱 Responsive Design
-
-LOLand is fully responsive and optimized for all devices:
-
-<div align="center">
-
-| Desktop | Mobile |
-|---------|--------|
-| ![Desktop View](https://via.placeholder.com/500x300/4a2c8e/ffffff?text=Desktop+View) | ![Mobile View](https://via.placeholder.com/200x400/4a2c8e/ffffff?text=Mobile+View) |
-
-</div>
-
-## 🎨 Color Palette
-
-<div align="center">
-<img src="https://via.placeholder.com/800x100/4a2c8e/ffffff?text=Primary" alt="Primary" />
-<img src="https://via.placeholder.com/800x100/c4a7e7/000000?text=Secondary" alt="Secondary" />
-<img src="https://via.placeholder.com/800x100/eb6f92/ffffff?text=Accent" alt="Accent" />
-<img src="https://via.placeholder.com/800x100/1f1d2e/ffffff?text=Background" alt="Background" />
-</div>
 
 ## 🤝 Contributing
 
