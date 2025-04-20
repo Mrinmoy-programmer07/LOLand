@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![LOLand Banner](https://via.placeholder.com/1200x300/4a2c8e/ffffff?text=LOLand+-+Web3+Meme+Platform)
+<img src="https://i.imgur.com/7PfbXEE.png" alt="LOLand Banner" width="600" />
 
 [![Next.js](https://img.shields.io/badge/Next.js-13.0+-000000?style=flat&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19.0+-61DAFB?style=flat&logo=react&logoColor=black)](https://reactjs.org/)
@@ -13,7 +13,7 @@
 
 **LOLand is a decentralized meme platform that empowers creators to share, monetize, and mint their memes as NFTs.**
 
-[Demo](https://loland.vercel.app) · [Report Bug](https://github.com/yourusername/loland/issues) · [Request Feature](https://github.com/yourusername/loland/issues)
+[Demo](https://loland.vercel.app) · [Report Bug](https://github.com/Mrinmoy-programmer07/LOLand/issues) · [Request Feature](https://github.com/Mrinmoy-programmer07/LOLand/issues)
 
 </div>
 
@@ -82,7 +82,7 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/loland.git
+   git clone https://github.com/Mrinmoy-programmer07/LOLand.git
    cd loland
    ```
 
@@ -261,7 +261,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-Project Link: [https://github.com/yourusername/loland](https://github.com/yourusername/loland)
+Project Link: [https://github.com/Mrinmoy-programmer07/LOLand](https://github.com/Mrinmoy-programmer07/LOLand)
 
 Join our community:
 
@@ -277,7 +277,5 @@ Join our community:
 ### Made with ❤️ by LOLand Team
 
 **Share a meme, earn a coin!**
-
-<img src="https://via.placeholder.com/150x150/4a2c8e/ffffff?text=LOLand" alt="LOLand Logo" width="100" />
 
 </div> 
